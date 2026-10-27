@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "SecurePass",
+  "description": "Mahalliy va shifrlangan parol menejeri.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "SecurePass’ni ochish",
+    "default_popup": "index.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Ctrl+Shift+Y" },
+      "description": "SecurePass popup oynasini ochish"
+    },
+    "securepass-lock-vault": {
+      "suggested_key": { "default": "Ctrl+Shift+K" },
+      "description": "Ochiq SecurePass vaultni darhol qulflash"
+    }
+  },
+  "permissions": ["storage", "activeTab", "scripting", "identity"],
+  "host_permissions": ["https://openidconnect.googleapis.com/*"],
+  "oauth2": {
+    "client_id": "209008207763-jlqjdkvroquv4ijjgioa5tesdkjodd0t.apps.googleusercontent.com",
+    "scopes": ["openid", "email", "profile"]
+  },
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "background.js", "type": "module" }
+}
